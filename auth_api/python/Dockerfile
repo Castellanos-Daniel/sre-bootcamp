@@ -9,5 +9,7 @@ RUN pip install -r requirements.txt
 
 COPY ./ /
 
+EXPOSE 8000
+
 # Change this part to point to the right python script
 CMD [ "python", "/api.py" ]
