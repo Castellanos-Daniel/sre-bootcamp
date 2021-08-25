@@ -54,4 +54,4 @@ class Database:
             return False
         else:
             role, = (query_response)
-            return role
+            return role[0]
