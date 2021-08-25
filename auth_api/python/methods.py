@@ -15,7 +15,9 @@ class Token:
             with Database() as db:
                 role = db.get_user_role(username)
 
-            token = jwt.encode({"role": role}, getenv('SECRET'))
+            token = jwt.encode({
+                "role": role
+            }, getenv('SECRET'))
 
             response = token
         else:
@@ -29,8 +31,7 @@ class Restricted:
     def access_data(self, authorization):
         try:
             jwt.decode(authorization, getenv('SECRET'), algorithms='HS256')
-            return "You are under protected data"
+            return 'You are under protected data'
         except Exception as e:
             print(e)
             return False
-        # return authorization
