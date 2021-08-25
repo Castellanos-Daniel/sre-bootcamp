@@ -13,7 +13,7 @@ protected = Restricted()
 # Just a health check
 @app.route("/")
 def url_root():
-    return "OK"
+    return {"Status": "OK"}
 
 # Just a health check
 
@@ -80,4 +80,4 @@ def url_protected():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=getenv('PORT'))
+    app.run(debug=True, host=getenv('API_HOST'), port=getenv('PORT'))
