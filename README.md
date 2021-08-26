@@ -123,3 +123,7 @@ Remember, you must send your forked repository by filling out the following **[G
 
 Thanks for completing the challenge, we can’t wait to see you soon!
 
+Docker image in dockerhub:
+
+https://hub.docker.com/r/gdanielcast/wize-gerardo-castellanos
+
