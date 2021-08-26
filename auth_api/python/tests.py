@@ -1,4 +1,3 @@
-from os import getenv
 import unittest
 from methods import Token, Restricted
 from dotenv import load_dotenv, find_dotenv
